@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,13 +12,39 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
+
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-size: 75;
+  text-align: center;
+  color: darkblue;
+}
+
+
+ul{
+  display: flex;
+  flex-direction: row;
+}
+
+
+h2{
+  font-size: 50;
+  color: darkblue;
 }

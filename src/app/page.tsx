@@ -1,101 +1,50 @@
+"use client"
+
+import NavBar from "@/Components/NavBar";
+import Cards from "@/Components/Card/Card";
+import Link from "next/link";
 import Image from "next/image";
+import Blurb from "@/Components/Blurb";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <h1 className="varela-round-regular">Female Entrepreneurship Learning Hub</h1>
+
+      <div className="flex flex-row justify-evenly">
+        <Image className="rounded-xl" src="/women.jpeg" alt="women" height={200} width={400} />
+        <Image className="rounded-xl" src="/women2.png" alt="women" height={200} width={400} />
+      </div>
+
+      <div className="mt-20 mb-20">
+      <Blurb
+        title="About"
+        text={
+          "At our core, we are dedicated to empowering female entrepreneurs at every stage of their journey. We believe that when women succeed in business, they not only transform their own lives but also create positive ripple effects that uplift families, communities, and industries. Our mission is to equip women with the tools, knowledge, and support they need to turn their dreams into reality. Below you will find resources and case studies to assist you, whether your taking your first step as an entrepreneur or your hundredth.  Whether you are a seasoned entrepreneur or just beginning to take the leap, our goal is to provide you with the resources, confidence, and inspiration to succeed. We believe in the power of women, and together, we can break barriers, shatter ceilings, and create a future where female entrepreneurship is limitless."
+        }
+      />
+      </div>
+
+      <div className="bg-green-300">
+        <div className="w-5/6 ml-auto mr-auto">
+        <h2 className="varela-round-regular">Resource Hub</h2>
+        <div className="flex flex-row  justify-around p-4">
+          <Cards text="I Fund Women" link="https://www.ifundwomen.com" image="/ifw.png" />
+          <Cards text="Ladies Who Launch" link="https://www.ladieswholaunch.org" image="/lwl.png" />
+          <Cards text="We Connect" link="https://weconnectinternational.org" image="weConnect.jpeg" />
+          <Cards text="Goldman Sachs" link="https://10ksbapply.com" image="gs.jpg" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+      <Blurb
+        title="Case Study: Sarah"
+        text={
+          "In 2020, Sarah, a skilled graphic designer, ventured into entrepreneurship to start her own business, targeting small business clients needing branding and design services. Despite her experience and vision, Sarah quickly encountered significant barriers that many female entrepreneurs face. First, accessing funding posed a considerable challenge. Traditional financial institutions and investors often hesitated, prioritizing candidates with extensive business networks and collateral, which left her with limited options for securing the necessary capital to launch her business. Beyond financial hurdles, Sarah struggled with a lack of mentorship and female representation in the entrepreneurial community. As a new business owner, she sought advice from experienced entrepreneurs but found it difficult to connect with women who had navigated similar journeys. Her search for mentors and networks where she could see herself reflected remained a constant roadblock in her development as a business leader. Balancing her business ambitions with her responsibilities as a mother further complicated Sarah’s journey. Without family-friendly support systems, managing her household and dedicating enough time to grow her business seemed almost impossible. Sarah often felt torn between her roles as an entrepreneur and a mother, with little guidance on balancing these competing demands. Furthermore, establishing a foothold in a competitive market without the benefit of strong networking channels limited her ability to expand. Without access to larger networks and markets, Sarah found herself confined to smaller projects that restricted her business growth. She sought to reach new clients and markets but found herself continually challenged by her lack of access to a network that could open these doors. Finally, Sarah realized that, while her skills in design were strong, she needed business training to thrive as a business owner. From financial management to strategic growth planning, the technical skills required to run her business felt like an uphill battle. These skill gaps often left her feeling underprepared, hindering her confidence and slowing her business’s growth. Sarah’s story highlights the multifaceted challenges faced by many women entrepreneurs, underscoring the need for targeted support systems to overcome funding, mentorship, work-life balance, networking, and skill development barriers."
+        }
+      />
+     
+    </main>
   );
 }
