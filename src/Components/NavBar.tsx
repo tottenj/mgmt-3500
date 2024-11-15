@@ -25,6 +25,7 @@ export default function NavBar() {
               Integrations
             </Link>
           </NavbarItem>
+      
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
