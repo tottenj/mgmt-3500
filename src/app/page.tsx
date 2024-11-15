@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
 
-      <h1 className="varela-round-regular">Female Entrepreneurship Learning Hub</h1>
+      <h1 className="varela-round-regular">Female Entrepreneurship Toolkit</h1>
 
       <div className="flex flex-row justify-evenly">
         <Image className="rounded-xl" src="/women.jpeg" alt="women" height={200} width={400} />
